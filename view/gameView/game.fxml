@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import model.CustomButton?>
+
+<AnchorPane fx:id="mPane" prefHeight="1000.0" prefWidth="1200.0" style="-fx-background-color: darkslategray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
+   <children>
+      <AnchorPane fx:id="dialogBox" visible="false" layoutX="382.0" layoutY="211.0" prefHeight="547.0" prefWidth="600.0">
+         <children>
+            <CustomButton layoutX="200.0" layoutY="70.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="200.0" text="Resume" fx:id="resume"/>
+            <CustomButton layoutX="200.0" layoutY="170.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="200.0" text="Restart" fx:id="restart"/>
+            <CustomButton layoutX="200.0" layoutY="270.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="200.0" text="Save" fx:id="save"/>
+            <CustomButton layoutX="200.0" layoutY="370.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="200.0" text="Exit" fx:id="exit"/>
+         </children>
+      </AnchorPane>
+      <Label layoutX="958.0" layoutY="14.0" prefHeight="77.0" prefWidth="134.0" text="Score:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Label>
+      <Label fx:id="score" layoutX="1092.0" layoutY="14.0" prefHeight="77.0" prefWidth="94.0" text="0" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold Italic" size="44.0" />
+         </font>
+      </Label>
+      <CustomButton layoutX="56.0" name="home" layoutY="31.0" fx:id="home" mnemonicParsing="false" minHeight="90.0" prefWidth="127.0" text="Home">
+         <font>
+            <Font name="Impact" size="20.0" />
+         </font>
+      </CustomButton>
+   </children>
+</AnchorPane>

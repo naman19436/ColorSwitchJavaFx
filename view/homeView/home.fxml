@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import model.CustomButton?>
+<?import model.CustomSubscene?>
+<?import model.CustomLabel?>
+<?import model.CustomItemPicker?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="ap" prefHeight="1000.0" prefWidth="1200.0" style="-fx-background-color: darkslategray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HomeController">
+   <children>
+   	  <CustomButton name="start" fx:id="start" layoutX="122.0" layoutY="510.0" onAction="#onHomeButtonClicked" prefHeight="49.0" prefWidth="190.0" text="Start" />
+      <CustomButton name="load" fx:id="load" layoutX="122.0" layoutY="620.0" onAction="#onHomeButtonClicked" prefHeight="49.0" prefWidth="190.0" text="Load" />
+      <CustomButton name="help" fx:id="help" layoutX="122.0" layoutY="730.0" onAction="#onHomeButtonClicked" prefHeight="49.0" prefWidth="190.0" text="Scores" />
+      <CustomButton name="exit" fx:id="exit" layoutX="122.0" layoutY="840.0" onAction="#onHomeButtonClicked" prefHeight="49.0" prefWidth="190.0" text="Exit" />
+      <VBox alignment="CENTER" layoutX="122.0" layoutY="65.0" prefHeight="325.0" prefWidth="336.0">
+         <children>
+            <StackPane prefHeight="257.0" prefWidth="247.0">
+               <children>
+                  <VBox fx:id="logoCircle1" alignment="CENTER" prefHeight="260.0" prefWidth="265.0">
+                     <children>
+                        <HBox alignment="CENTER" prefWidth="336.0">
+                           <children>
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="130.0" radiusY="130.0" startAngle="90.0" stroke="#07d4f0" strokeWidth="10.0" />
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="130.0" radiusY="130.0" stroke="#ffc100" strokeWidth="10.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="130.0" radiusY="130.0" startAngle="180.0" stroke="#ff0085" strokeWidth="10.0" />
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="130.0" radiusY="130.0" startAngle="270.0" stroke="#8d00f8" strokeWidth="10.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="logoCircle2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="260.0" prefWidth="265.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="110.0" radiusY="110.0" startAngle="90.0" stroke="#07d4f0" strokeWidth="10.0" />
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="110.0" radiusY="110.0" stroke="#ffc100" strokeWidth="10.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="110.0" radiusY="110.0" startAngle="180.0" stroke="#ff0085" strokeWidth="10.0" />
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="110.0" radiusY="110.0" startAngle="270.0" stroke="#8d00f8" strokeWidth="10.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="logoCircle3" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="225.0" prefWidth="365.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="90.0" radiusY="90.0" startAngle="90.0" stroke="#07d4f0" strokeWidth="10.0" />
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="90.0" radiusY="90.0" stroke="#ffc100" strokeWidth="10.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="101.0" prefWidth="228.0">
+                           <children>
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="90.0" radiusY="90.0" startAngle="180.0" stroke="#ff0085" strokeWidth="10.0" />
+                              <Arc fill="#1f93ff00" length="90.0" radiusX="90.0" radiusY="90.0" startAngle="270.0" stroke="#8d00f8" strokeWidth="10.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <ImageView fitHeight="154.0" fitWidth="156.0" layoutX="216.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/giphy.gif" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logo" fitHeight="226.0" fitWidth="500.0" layoutX="546.0" layoutY="117.0" onMouseEntered="#logoEnter" onMouseExited="#logoExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@resources/logo.png" />
+         </image>
+      </ImageView>
+      
+      <CustomSubscene fx:id="startSubscene" height="500.0" width="750" layoutX="1300.0" layoutY="450.0">
+      	 <root>
+      	   <AnchorPane prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: transparent; -fx-background-image: url(/view/homeView/resources/start_panel.png); -fx-background-size: 100% 100%">
+      	  		<children>
+                    <CustomLabel small="no" layoutY="30.0" label="Choose  your  theme" name="start"/>
+                    <CustomItemPicker fx:id="picker" names="start_panel load_panel help_panel exit_panel"/>
+      	  			<CustomButton name="start" onAction="#onSubsceneButtonClicked" fx:id="play" layoutX="280.0" layoutY="375.0" prefHeight="49.0" prefWidth="190.0" text="Play" />
+      	  		</children>
+      	   </AnchorPane>
+         </root>
+      </CustomSubscene>
+      <CustomSubscene fx:id="loadSubscene" height="500.0" width="750" layoutX="1300.0" layoutY="450.0" >
+         <root>
+      	   <AnchorPane prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: transparent; -fx-background-size: 100% 100%; -fx-background-image: url(/view/homeView/resources/load_panel.png);">
+      	  		<children>
+      	  			<CustomLabel small="no" layoutY="50.0" label="Select  a  game" name="load" ></CustomLabel>
+      	  			<CustomButton name="helper1" onAction="#onSubsceneButtonClicked" fx:id="load1" layoutX="100.0" layoutY="175.0" prefHeight="49.0" prefWidth="250.0" text="Saved Game 1" />
+			        <CustomButton name="helper3" onAction="#onSubsceneButtonClicked" fx:id="load2" layoutX="400.0" layoutY="175.0" prefHeight="49.0" prefWidth="250.0" text="Saved Game 2" />
+      				<CustomButton name="helper3" onAction="#onSubsceneButtonClicked" fx:id="load3" layoutX="100.0" layoutY="325.0" prefHeight="49.0" prefWidth="250.0" text="Saved Game 3" />
+			        <CustomButton name="helper1" onAction="#onSubsceneButtonClicked" fx:id="load4" layoutX="400.0" layoutY="325.0" prefHeight="49.0" prefWidth="250.0" text="Saved Game 4" />
+      	  		</children>
+      	   </AnchorPane>
+      	 </root>
+      </CustomSubscene>
+      <CustomSubscene fx:id="helpSubscene" height="500.0" width="750" layoutX="1300.0" layoutY="450.0" >
+         <root>
+      	   <AnchorPane prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: transparent; -fx-background-size: 100% 100%; -fx-background-image: url(/view/homeView/resources/help_panel.png);">
+      	  		<children>
+      	  			<CustomLabel small="no" label="Scores"  name="help" ></CustomLabel>
+                    <CustomLabel small="no" label="Total Points" name="help" layoutX="100" layoutY="200"></CustomLabel>
+                    <CustomLabel small="yes" fx:id="total" name="help" layoutX="550" layoutY="200"  maxWidth="90" prefWidth="90"></CustomLabel>
+                    <CustomLabel small="no" label="Highest Score"  name="help" layoutX="100" layoutY="300"></CustomLabel>
+                    <CustomLabel  small="yes" fx:id="high" name="help" layoutX="550" layoutY="300"  maxWidth="90" prefWidth="90"></CustomLabel>
+
+                </children>
+      	   </AnchorPane>
+      	 </root>
+      </CustomSubscene>
+      <CustomSubscene fx:id="exitSubscene" height="500.0" width="750" layoutX="1300.0" layoutY="450.0" >
+         <root>
+      	   <AnchorPane prefHeight="750.0" prefWidth="500.0" style="-fx-background-color: transparent; -fx-background-size: 100% 100%; -fx-background-image: url(/view/homeView/resources/exit_panel.png);">
+      	  		<children>
+      	  			<CustomLabel small="no" label="Please  confirm  exit" name="exit" layoutY="50" ></CustomLabel>
+      	  			<CustomButton fx:id="yes" onAction="#onSubsceneButtonClicked" onMouseEntered="#showExitAnimation" onMouseExited="#hideExitAnimation" name="helper1" layoutX="100.0" layoutY="150.0" prefHeight="49.0" prefWidth="250.0" text="Yes" />
+			        <CustomButton fx:id="no" onAction="#onSubsceneButtonClicked"  onMouseEntered="#showExitAnimation" onMouseExited="#hideExitAnimation" name="helper3" layoutX="400.0" layoutY="150.0" prefHeight="49.0" prefWidth="250.0" text="No" />
+      	  			<ImageView fx:id="bye" visible="false" fitHeight="154.0" fitWidth="156.0" layoutX="300.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+				         <image>
+				            <Image url="@resources/bye.gif" />
+				         </image>
+				    </ImageView>
+				    <ImageView fx:id="hi" visible="false" fitHeight="154.0" fitWidth="156.0" layoutX="325.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+				         <image>
+				            <Image url="@resources/hi.gif" />
+				         </image>
+				    </ImageView>
+      	  		</children>
+      	   </AnchorPane>
+      	 </root>
+   	   </CustomSubscene>
+   </children>
+</AnchorPane>
